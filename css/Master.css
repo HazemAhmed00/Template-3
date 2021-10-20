@@ -1,0 +1,158 @@
+/* Start Global Rules */
+
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-duration: 0.3s
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+.Header {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 10px #DDD;
+  -webkit-box-shadow: 0 0 10px #DDD;
+  -moz-box-shadow: 0 0 10px #DDD;
+}
+
+.Header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.Header .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--main-color);
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width:767px) {
+  .Header .logo {
+    width: 100%;
+  }
+  .Header .main-nav {
+    margin: auto;
+  }
+  
+}
+
+.Header .main-nav>li>a {
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 30px;
+  color: black;
+  overflow: hidden;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+@media (max-width:767px) {
+  .Header .main-nav>li>a {
+    padding: 10px;
+    height: 50px;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+  }
+
+.Header .main-nav>li>a:hover {
+  background-color: #FAFAFA;
+  color: var(--main-color);
+  overflow: visible;
+}
+
+
+.Header .main-nav>li>a::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.Header .main-nav>li>a:hover:before {
+  left: 0;
+}
+.Header .main-nav {
+  display: flex;
+}
+
+/* End Header */
