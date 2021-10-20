@@ -210,7 +210,7 @@ a {
   margin: 0;
 }
 
-.landing .go-arrow {
+.landing .goarrow {
   position: absolute;
   left: 50%;
   bottom: 30px;
@@ -277,10 +277,10 @@ top: 20px;
   }
 
 }
-.landing .go-arrow:hover {
+.landing .goarrow:hover {
   color: var(--main-color-alt);
 }
 
-.landing .go-arrow i {}
+.landing .goarrow i {}
 
 /* End Landing */
