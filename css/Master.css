@@ -120,7 +120,7 @@ a {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  width: 50.1%;
+  width: 51%;
   height: 100%;
   top: 0;
   left: 0;
@@ -136,7 +136,7 @@ a {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  width: 50.1%;
+  width: 51%;
   height: 100%;
   top: 0;
   right: 0;
@@ -397,9 +397,9 @@ a {
   -o-border-radius: 10px;
   margin-bottom: 50px;
   position: relative;
-  box-shadow: 0 2px 10px #c7c7c7;
-    -webkit-box-shadow: 0 2px 10px #c7c7c7;
-    -moz-box-shadow: 0 2px 10px #c7c7c7;
+  box-shadow: 0 5px 10px #0000001a;
+    -webkit-box-shadow: 0 5px 10px #0000001a;
+    -moz-box-shadow: 0 5px 10px #0000001a;
 }
 .articles .box .context p {
   padding-top: 10px;
