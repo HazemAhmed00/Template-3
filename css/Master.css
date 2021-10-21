@@ -3,7 +3,7 @@
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
-  --main-duration: 0.5s
+  --main-duration: 0.4s
 }
 
 * {
@@ -62,7 +62,13 @@ a {
     width: 1170px;
   }
 }
-
+.title-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
 .title {
   font-size: 25px;
   border: 2px solid black;
@@ -372,24 +378,18 @@ a {
 
 /* Start Articles */
 
-.articles .container:first-of-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 100px;
+.articles {
+  margin-top: 100px;
 }
-
 .articles .container:last-of-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 40px;
 }
 
-.articles .box  {
-  width: 300px;
+.articles .box {
+  width: auto;
   overflow: hidden;
-  background-color: #EEE;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -398,20 +398,49 @@ a {
   margin-bottom: 50px;
   position: relative;
   box-shadow: 0 5px 10px #0000001a;
-    -webkit-box-shadow: 0 5px 10px #0000001a;
-    -moz-box-shadow: 0 5px 10px #0000001a;
+  -webkit-box-shadow: 0 5px 10px #0000001a;
+  -moz-box-shadow: 0 5px 10px #0000001a;
 }
+
+.articles .box:hover {
+  transition-duration: var(--main-duration);
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.articles .box:hover .info i {
+  animation: arror 2s linear infinite;
+  -webkit-animation: arrow 0.6s linear infinite;
+}
+@keyframes arrow {
+100% {
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+}
+
+  
+}
+
 .articles .box .context p {
   padding-top: 10px;
+  line-height: 1.5;
   color: #777;
   margin-left: 20px;
   margin-right: 30px;
 }
+
 .articles .box .context h3 {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1.4em;
+  margin-left: 20px;
+  margin-top: 12px;
+  font-size: 1.2em;
 }
+
 .articles .box .info {
   display: flex;
   padding-left: 20px;
@@ -421,19 +450,24 @@ a {
   width: 100%;
   height: 50px;
 }
+
 .articles .box hr {
   margin-bottom: 0;
 }
+
 .articles .box .info a {
   color: var(--main-color);
   font-size: 20px;
   font-weight: bold;
 }
+
 .articles .box .info i {
   color: var(--main-color);
 }
+
 .articles .box img {
-  width: 300px;
+  max-width: 100%;
+  width: 100%;
 }
 
 /* End Articles */
