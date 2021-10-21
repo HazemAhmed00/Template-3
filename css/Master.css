@@ -97,7 +97,7 @@ a {
   top: calc(50% - 5px);
   right: -30px;
   position: absolute;
-  transition-duration: var(--main-duration);
+  transition-duration: 0.8s;
   transition-property: all;
 }
 
@@ -114,7 +114,7 @@ a {
   top: calc(50% - 5px);
   left: -30px;
   position: absolute;
-  transition-duration: var(--main-duration);
+  transition-duration: 0.8s;
   transition-property: all;
 }
 
